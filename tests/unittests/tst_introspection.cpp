@@ -107,11 +107,13 @@ void tst_Introspection::test_introspect_data()
                     QStringList()
                         << "QMainWindow"
                         << "QWidgetWindow"
+                        << "QWidgetWindow"
+                        << "QWidgetWindow"
                     )
             );
 
-    QTest::newRow("//QWidget[id=6]")
-        << "//QWidget[id=6]"
+    QTest::newRow("//QWidget[id=8]")
+        << "//QWidget[id=8]"
         << 1
         << "/tst_introspection/QMainWindow/QWidget"
         << "objectName"
@@ -121,8 +123,8 @@ void tst_Introspection::test_introspect_data()
                 << "centralTestWidget"
             );
 
-    QTest::newRow("//QPushButton[id=9]")
-        << "//QPushButton[id=9]"
+    QTest::newRow("//QPushButton[id=11]")
+        << "//QPushButton[id=11]"
         << 1
         << "/tst_introspection/QMainWindow/QWidget/QPushButton"
         << "objectName"
