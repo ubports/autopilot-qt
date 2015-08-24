@@ -69,8 +69,7 @@ Description: make Qt applications introspectable by autopilot - Qt5 plugin
 Package: qttestability-autopilot
 Section: libs
 Architecture: any
-Depends: libxpathselect1.4,
-         python3-autopilot (>= 1.4),
+Depends: python3-autopilot (>= 1.4),
          autopilot-qt5 | autopilot-qt4
          ${misc:Depends},
          ${shlibs:Depends}
