@@ -1,3 +1,11 @@
+autopilot-qt (1.4+15.10.20150825-0ubuntu1) wily; urgency=medium
+
+  [ Christopher Lee ]
+  * Update unittest to reflect 2 new objects that appear in the object
+    tree.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 25 Aug 2015 08:13:05 +0000
+
 autopilot-qt (1.4+14.10.20140820-0ubuntu1) utopic; urgency=low
 
   [ Robert Bruce Park ]
