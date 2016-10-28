@@ -1,0 +1,57 @@
+name: autopilot-qt
+version: 1.4
+summary: Autopilot QT
+description: |
+  This project makes Qt applications introspectable by autopilot when started with the -testability flag.
+  This allows autopilot to test any existing Qt application, without having to rebuild the application
+  under test.
+
+confinement: strict
+
+slots:
+  testability:
+    content: testability
+    interface: content
+    read:
+      - usr/lib
+
+parts:
+  auqopilot-qt5:
+    plugin: qmake
+    qt-version: qt5
+    source: .
+    filesets:
+       libs:
+        - usr/lib/libautopilot_driver_qt5.so*
+    stage:
+      - $libs
+    snap:
+      - $libs
+
+  auqopilot-qt4:
+    plugin: qmake
+    qt-version: qt4
+    source: .
+    filesets:
+       libs:
+        - usr/lib/libautopilot_driver_qt4.so*
+    stage:
+      - $libs
+    snap:
+      - $libs
+
+  auqopilot-qt:
+    plugin: qmake
+    qt-version: qt5
+    project-files: [lib/lib.pro]
+    source: .
+    stage-packages:
+      - libxpathselect1.4v5
+    filesets:
+       libs:
+        - usr/lib/x86_64-linux-gnu/libxpathselect*
+        - usr/lib/libqttestability*
+    stage:
+      - $libs
+    snap:
+      - $libs

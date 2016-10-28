@@ -12,4 +12,6 @@ SOURCES = qttestability.cpp
 HEADERS = qttestability.h
 
 target.file = libtestability*
+target.path = /usr/lib
+
 INSTALLS += target
