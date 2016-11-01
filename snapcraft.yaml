@@ -16,19 +16,23 @@ slots:
       - usr/lib
 
 parts:
-  auqopilot-qt5:
+  autopilot-qt5:
     plugin: qmake
     qt-version: qt5
     source: .
     filesets:
        libs:
+        - usr/lib/*/libxpathselect*
         - usr/lib/libautopilot_driver_qt5.so*
+        - usr/lib/libqttestability*
+    stage-packages:
+      - libxpathselect1.4v5
     stage:
       - $libs
     snap:
       - $libs
 
-  auqopilot-qt4:
+  autopilot-qt4:
     plugin: qmake
     qt-version: qt4
     source: .
@@ -39,19 +43,5 @@ parts:
       - $libs
     snap:
       - $libs
+  
 
-  auqopilot-qt:
-    plugin: qmake
-    qt-version: qt5
-    project-files: [lib/lib.pro]
-    source: .
-    stage-packages:
-      - libxpathselect1.4v5
-    filesets:
-       libs:
-        - usr/lib/x86_64-linux-gnu/libxpathselect*
-        - usr/lib/libqttestability*
-    stage:
-      - $libs
-    snap:
-      - $libs
