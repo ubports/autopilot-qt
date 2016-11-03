@@ -20,13 +20,14 @@ parts:
     plugin: qmake
     qt-version: qt5
     source: .
+    build-packages: ['debhelper', 'libgl1-mesa-dev', 'libgles2-mesa-dev', 'libqt4-dev', 'libxpathselect-dev', 'mesa-common-dev', 'pkg-config', 'qt4-qmake', 'qt5-qmake', 'qtbase5-dev', 'qtchooser', 'qtdeclarative5-dev', 'xvfb']
+    stage-packages:
+      - libxpathselect1.4v5
     filesets:
        libs:
         - usr/lib/*/libxpathselect*
         - usr/lib/libautopilot_driver_qt5.so*
         - usr/lib/libqttestability*
-    stage-packages:
-      - libxpathselect1.4v5
     stage:
       - $libs
     snap:
@@ -36,6 +37,8 @@ parts:
     plugin: qmake
     qt-version: qt4
     source: .
+    build-packages:
+      - libxpathselect-dev
     filesets:
        libs:
         - usr/lib/libautopilot_driver_qt4.so*
@@ -43,5 +46,3 @@ parts:
       - $libs
     snap:
       - $libs
-  
-
