@@ -1,6 +1,7 @@
 name: autopilot-qt
 version: 1.4
 summary: Autopilot QT
+grade: stable
 description: |
   This project makes Qt applications introspectable by autopilot when started with the -testability flag.
   This allows autopilot to test any existing Qt application, without having to rebuild the application
