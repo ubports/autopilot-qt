@@ -21,7 +21,7 @@ parts:
     plugin: qmake
     qt-version: qt5
     source: .
-    build-packages: ['debhelper', 'libgl1-mesa-dev', 'libgles2-mesa-dev', 'libqt4-dev', 'libxpathselect-dev', 'mesa-common-dev', 'pkg-config', 'qt4-qmake', 'qt5-qmake', 'qtbase5-dev', 'qtchooser', 'qtdeclarative5-dev', 'xvfb']
+    build-packages: ['g++', 'debhelper', 'libgl1-mesa-dev', 'libgles2-mesa-dev', 'libqt4-dev', 'libxpathselect-dev', 'mesa-common-dev', 'pkg-config', 'qt4-qmake', 'qt5-qmake', 'qtbase5-dev', 'qtchooser', 'qtdeclarative5-dev', 'xvfb']
     stage-packages:
       - libxpathselect1.4v5
     filesets:
