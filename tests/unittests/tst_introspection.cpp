@@ -111,9 +111,13 @@ void tst_Introspection::test_introspect_data()
                         << "QWidgetWindow"
                     )
             );
-
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     QTest::newRow("//QWidget[id=8]")
         << "//QWidget[id=8]"
+#else
+    QTest::newRow("//QWidget[id=7]")
+        << "//QWidget[id=7]"
+#endif
         << 1
         << "/tst_introspection/QMainWindow/QWidget"
         << "objectName"
