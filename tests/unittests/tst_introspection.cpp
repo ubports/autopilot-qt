@@ -127,8 +127,13 @@ void tst_Introspection::test_introspect_data()
                 << "centralTestWidget"
             );
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     QTest::newRow("//QPushButton[id=11]")
         << "//QPushButton[id=11]"
+#else
+    QTest::newRow("//QPushButton[id=10]")
+        << "//QPushButton[id=10]"
+#endif
         << 1
         << "/tst_introspection/QMainWindow/QWidget/QPushButton"
         << "objectName"
