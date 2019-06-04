@@ -1,6 +1,6 @@
-autopilot-qt (1.4~0ubports0) xenial; urgency=medium
+autopilot-qt (1.5~0ubports0) xenial; urgency=medium
 
-  * Import to UBports
+  * Import to UBports, fixing unit tests, bumping version
 
 -- Florian Leeber <florian@ubports.com> Sun, 02 Jun 2019 20:45:06 +0300
 
