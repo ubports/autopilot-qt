@@ -27,8 +27,7 @@ Vcs-Browser: https://bazaar.launchpad.net/~autopilot/autopilot-qt/trunk/files
 Package: libautopilot-qt
 Section: libs
 Architecture: any
-Depends: autopilot-qt4,
-         autopilot-qt5,
+Depends: autopilot-qt5 | autopilot-qt4,
          qttestability-autopilot,
          ${misc:Depends},
          ${shlibs:Depends},
